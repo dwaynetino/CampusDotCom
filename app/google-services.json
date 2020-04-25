@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "440896363004",
+    "firebase_url": "https://campnews-d8dbb.firebaseio.com",
+    "project_id": "campnews-d8dbb",
+    "storage_bucket": "campnews-d8dbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440896363004:android:dd122979b916c4445efa79",
+        "android_client_info": {
+          "package_name": "com.varconn.inc.campusdotcom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440896363004-8903f3uosmq5tm57p6lfrqdb65uhd8p1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.varconn.inc.campusdotcom",
+            "certificate_hash": "6a89e22079044035f5ad166349118eee5649143b"
+          }
+        },
+        {
+          "client_id": "440896363004-vetvlirsefektsshfephoedh1a65sgn9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGUO4LfGMcqC2QNY3rcEHyJmKxc_uUKcc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440896363004-vetvlirsefektsshfephoedh1a65sgn9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
