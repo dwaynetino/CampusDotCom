@@ -88,6 +88,7 @@ public class PostDetailsActivity extends BaseActivity {
     private String imgUrl = null;
 
     private Button mBtnViewALlComments, mBtnWriteAComment;
+    ApiUtilities api = new ApiUtilities();
 
 
     @Override
@@ -267,7 +268,7 @@ public class PostDetailsActivity extends BaseActivity {
     }
 
     private void loadPostDetails() {
-        ApiUtilities.getApiInterface().getPostDetails(mPostId).enqueue(new Callback<PostDetails>() {
+        api.getApiInterface().getPostDetails(mPostId).enqueue(new Callback<PostDetails>() {
             @SuppressLint("RestrictedApi")
             @Override
             public void onResponse(Call<PostDetails> call, Response<PostDetails> response) {
@@ -318,7 +319,7 @@ public class PostDetailsActivity extends BaseActivity {
 
     private void loadComments() {
 
-        ApiUtilities.getApiInterface().getComments(mCommentsLink, mItemCount).enqueue(new Callback<List<Comments>>() {
+        api.getApiInterface().getComments(mCommentsLink, mItemCount).enqueue(new Callback<List<Comments>>() {
             @Override
             public void onResponse(Call<List<Comments>> call, Response<List<Comments>> response) {
                 if (response.isSuccessful()) {
@@ -356,7 +357,7 @@ public class PostDetailsActivity extends BaseActivity {
     }
 
     public void loadRelatedPosts() {
-        ApiUtilities.getApiInterface().getPostsByCategory(mPageNo, mModel.getCategories().get(AppConstant.ZERO_INDEX)).enqueue(new Callback<List<Post>>() {
+        api.getApiInterface().getPostsByCategory(mPageNo, mModel.getCategories().get(AppConstant.ZERO_INDEX)).enqueue(new Callback<List<Post>>() {
             @Override
             public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
                 if (response.isSuccessful()) {

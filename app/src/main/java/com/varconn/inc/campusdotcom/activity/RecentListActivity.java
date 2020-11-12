@@ -35,6 +35,8 @@ import retrofit2.Response;
 
 public class RecentListActivity extends BaseActivity {
 
+    ApiUtilities api = new ApiUtilities();
+
     private Activity mActivity;
     private Context mContext;
 
@@ -150,7 +152,7 @@ public class RecentListActivity extends BaseActivity {
     }
 
     public void loadRecentPosts() {
-        ApiUtilities.getApiInterface().getLatestPosts(mPageNo).enqueue(new Callback<List<Post>>() {
+        api.getApiInterface().getLatestPosts(mPageNo).enqueue(new Callback<List<Post>>() {
             @Override
             public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
                 if (response.isSuccessful()) {

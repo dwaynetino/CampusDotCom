@@ -42,7 +42,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 
         // uncomment this line to disable ads from entire application
         //disableAds();
-        disableAds();
+        //disableAds();
 
     }
 
@@ -142,7 +142,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 
         // main items
         if (id == R.id.action_home) {
-            ActivityUtilities.getInstance().invokeNewActivity(mActivity, MainActivity.class, true);
+            ActivityUtilities.getInstance().invokeNewActivity(mActivity, HomeActivity.class, true);
         } else if (id == R.id.action_categories) {
             ActivityUtilities.getInstance().invokeNewActivity(mActivity, CategoryListActivity.class, false);
         } else if (id == R.id.action_book) {

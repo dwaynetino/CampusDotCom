@@ -9,6 +9,7 @@
             android:title="@string/site_menu_home" />
 
         <item
+            android:visible="false"
             android:id="@+id/action_categories"
             android:icon="@drawable/ic_categories"
             android:title="@string/site_menu_category_list" />

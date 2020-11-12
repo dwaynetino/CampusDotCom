@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import android.os.Bundle;
@@ -13,7 +14,10 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.preference.PreferenceManager;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ImageButton;
@@ -26,6 +30,7 @@ import com.varconn.inc.campusdotcom.R;
 import com.varconn.inc.campusdotcom.adapters.HomeCategoryAdapter;
 import com.varconn.inc.campusdotcom.adapters.FeaturedPagerAdapter;
 import com.varconn.inc.campusdotcom.adapters.HomeRecentPostAdapter;
+import com.varconn.inc.campusdotcom.api.ApiInterface;
 import com.varconn.inc.campusdotcom.api.ApiUtilities;
 import com.varconn.inc.campusdotcom.api.HttpParams;
 import com.varconn.inc.campusdotcom.data.constant.AppConstant;
@@ -42,11 +47,15 @@ import com.varconn.inc.campusdotcom.utility.AppUtilities;
 import com.varconn.inc.campusdotcom.utility.RateItDialogFragment;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import static com.varconn.inc.campusdotcom.data.constant.AppConstant.BASE_NAME;
+import static com.varconn.inc.campusdotcom.data.constant.AppConstant.MY_PREFS;
 
 public class MainActivity extends BaseActivity {
 
@@ -84,6 +93,7 @@ public class MainActivity extends BaseActivity {
     private int mRecentPageNo = 1, mPastVisibleItems, mVisibleItemCount, mTotalItemCount;
     private GridLayoutManager mLayoutManager;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,6 +106,14 @@ public class MainActivity extends BaseActivity {
         initListener();
         implementScrollListener();
 
+        Log.d("URL", String.valueOf(Arrays.asList(ApiInterface.myHash)));
+
+    }
+
+
+    public String getUrl(){
+
+        return "url";
     }
 
     @Override
@@ -179,8 +197,10 @@ public class MainActivity extends BaseActivity {
 
         mBottomLayout = (RelativeLayout) findViewById(R.id.rv_itemload);
 
-        initToolbar(false);
-        initDrawer();
+        initToolbar(true);
+        TextView textView = findViewById(R.id.toolbarTitle);
+        textView.setText(ApiInterface.myHash.get(BASE_NAME));
+        //initDrawer();
         initLoader();
     }
 
@@ -331,7 +351,8 @@ public class MainActivity extends BaseActivity {
     }
 
     public void loadFeaturedPosts() {
-        ApiUtilities.getApiInterface().getFeaturedPosts(mPageNo).enqueue(new Callback<List<Post>>() {
+        ApiUtilities api = new ApiUtilities();
+        api.getApiInterface().getFeaturedPosts(mPageNo).enqueue(new Callback<List<Post>>() {
             @Override
             public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
                 if (response.isSuccessful()) {
@@ -360,7 +381,8 @@ public class MainActivity extends BaseActivity {
     }
 
     private void loadCategories() {
-        ApiUtilities.getApiInterface().getCategories(mItemCount).enqueue(new Callback<List<Category>>() {
+        ApiUtilities api = new ApiUtilities();
+        api.getApiInterface().getCategories(mItemCount).enqueue(new Callback<List<Category>>() {
             @Override
             public void onResponse(Call<List<Category>> call, Response<List<Category>> response) {
                 if (response.isSuccessful()) {
@@ -393,7 +415,8 @@ public class MainActivity extends BaseActivity {
     }
 
     public void loadRecentPosts() {
-        ApiUtilities.getApiInterface().getLatestPosts(mRecentPageNo).enqueue(new Callback<List<Post>>() {
+        ApiUtilities api = new ApiUtilities();
+        api.getApiInterface().getLatestPosts(mRecentPageNo).enqueue(new Callback<List<Post>>() {
             @Override
             public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
                 if (response.isSuccessful()) {

@@ -40,6 +40,7 @@ public class CommentListActivity extends BaseActivity implements CommentDialogUt
     private String mCommentsLink;
     private int mItemCount = 5;
     private boolean mShouldDialogOpen;
+    ApiUtilities api = new ApiUtilities();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,7 +95,7 @@ public class CommentListActivity extends BaseActivity implements CommentDialogUt
 
         showLoader();
 
-        ApiUtilities.getApiInterface().getComments(mCommentsLink, mItemCount).enqueue(new Callback<List<Comments>>() {
+        api.getApiInterface().getComments(mCommentsLink, mItemCount).enqueue(new Callback<List<Comments>>() {
             @Override
             public void onResponse(Call<List<Comments>> call, Response<List<Comments>> response) {
                 if (response.isSuccessful()) {

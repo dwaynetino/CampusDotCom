@@ -33,6 +33,7 @@ public class CommentDialogUtilities extends DialogFragment {
     private int postId;
     private TextView txtDialogTitle;
     private EditText edtName, edtEmail, edtComment;
+    ApiUtilities api = new ApiUtilities();
 
     public static interface OnCommentCompleteListener {
         public abstract void onCommentComplete(Boolean isOkPressed);
@@ -85,7 +86,7 @@ public class CommentDialogUtilities extends DialogFragment {
                         AppPreference.getInstance(mActivity).setString(PrefKey.PREF_NAME, name);
                         AppPreference.getInstance(mActivity).setString(PrefKey.PREF_EMAIL, email);
 
-                        ApiUtilities.getApiInterface().postComment(name, email, comment, postId).enqueue(new Callback<String>() {
+                        api.getApiInterface().postComment(name, email, comment, postId).enqueue(new Callback<String>() {
                             @Override
                             public void onResponse(Call<String> call, Response<String> response) {
                                 if (response.isSuccessful()) {

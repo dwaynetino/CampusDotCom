@@ -4,11 +4,11 @@ android {
     compileSdkVersion 29
     buildToolsVersion '29.0.1'
     defaultConfig {
-        applicationId "com.varconn.inc.campusdotcom"
+        applicationId "com.varconn.zimbonews"
         minSdkVersion 17
         targetSdkVersion 29
-        versionCode 8
-        versionName "2.4"
+        versionCode 9
+        versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -41,7 +41,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
 
     //circular imageview
-    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     // photoview
     implementation 'com.github.chrisbanes:PhotoView:2.0.0'

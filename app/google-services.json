@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "440896363004",
-    "firebase_url": "https://campnews-d8dbb.firebaseio.com",
-    "project_id": "campnews-d8dbb",
-    "storage_bucket": "campnews-d8dbb.appspot.com"
+    "project_number": "314843634243",
+    "firebase_url": "https://campusnewz-e264e.firebaseio.com",
+    "project_id": "campusnewz-e264e",
+    "storage_bucket": "campusnewz-e264e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:440896363004:android:dd122979b916c4445efa79",
+        "mobilesdk_app_id": "1:314843634243:android:5052f6b972dd66113552f6",
         "android_client_info": {
-          "package_name": "com.varconn.inc.campusdotcom"
+          "package_name": "com.varconn.zimbonews"
         }
       },
       "oauth_client": [
         {
-          "client_id": "440896363004-8903f3uosmq5tm57p6lfrqdb65uhd8p1.apps.googleusercontent.com",
+          "client_id": "314843634243-igftko6lur4538i2lkm4hqhlkg92ak99.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.varconn.inc.campusdotcom",
-            "certificate_hash": "6a89e22079044035f5ad166349118eee5649143b"
+            "package_name": "com.varconn.zimbonews",
+            "certificate_hash": "eaa59e88ba58789a3fceb12a0746d363a8ebc3bd"
           }
         },
         {
-          "client_id": "440896363004-vetvlirsefektsshfephoedh1a65sgn9.apps.googleusercontent.com",
+          "client_id": "314843634243-3g2orkkclgobntlrkds5fm118uuvj4ao.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCGUO4LfGMcqC2QNY3rcEHyJmKxc_uUKcc"
+          "current_key": "AIzaSyCbOfGDcgq1ms5w2sJhjBxJiN0ufo5zYeM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "440896363004-vetvlirsefektsshfephoedh1a65sgn9.apps.googleusercontent.com",
+              "client_id": "314843634243-3g2orkkclgobntlrkds5fm118uuvj4ao.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

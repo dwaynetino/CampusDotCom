@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CampNews.iml" filepath="$PROJECT_DIR$/CampNews.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CampusDotCom.iml" filepath="$PROJECT_DIR$/.idea/modules/CampusDotCom.iml" group="CampusDotCom" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CampusDotCom-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CampusDotCom-app.iml" group="CampusDotCom/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -35,6 +35,8 @@ import retrofit2.Response;
 
 public class PostListFragment extends Fragment {
 
+    ApiUtilities api = new ApiUtilities();
+
     private LinearLayout mLoadingView, mNoDataView;
 
     private ArrayList<Post> postList;
@@ -202,7 +204,7 @@ public class PostListFragment extends Fragment {
     }
 
     public void loadFeaturedPosts() {
-        ApiUtilities.getApiInterface().getFeaturedPosts(mPageNo).enqueue(new Callback<List<Post>>() {
+        api.getApiInterface().getFeaturedPosts(mPageNo).enqueue(new Callback<List<Post>>() {
             @Override
             public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
                 if (response.isSuccessful()) {
@@ -221,7 +223,7 @@ public class PostListFragment extends Fragment {
     }
 
     public void loadSearchedPosts() {
-        ApiUtilities.getApiInterface().getSearchedPosts(mPageNo, mSearchedText).enqueue(new Callback<List<Post>>() {
+        api.getApiInterface().getSearchedPosts(mPageNo, mSearchedText).enqueue(new Callback<List<Post>>() {
             @Override
             public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
                 if (response.isSuccessful()) {

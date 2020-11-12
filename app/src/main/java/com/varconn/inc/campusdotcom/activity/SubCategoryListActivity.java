@@ -38,6 +38,8 @@ import retrofit2.Response;
 
 public class SubCategoryListActivity extends BaseActivity {
 
+    ApiUtilities api = new ApiUtilities();
+
     private Activity mActivity;
     private Context mContext;
 
@@ -198,7 +200,8 @@ public class SubCategoryListActivity extends BaseActivity {
     }
 
     public void loadCategoryWisePosts() {
-        ApiUtilities.getApiInterface().getPostsByCategory(mPageNo, mCategoryId).enqueue(new Callback<List<Post>>() {
+
+        api.getApiInterface().getPostsByCategory(mPageNo, mCategoryId).enqueue(new Callback<List<Post>>() {
             @Override
             public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
                 if (response.isSuccessful()) {

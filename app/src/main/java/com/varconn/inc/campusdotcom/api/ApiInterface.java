@@ -5,6 +5,7 @@ import com.varconn.inc.campusdotcom.models.comment.Comments;
 import com.varconn.inc.campusdotcom.models.post.Post;
 import com.varconn.inc.campusdotcom.models.post.PostDetails;
 
+import java.util.HashMap;
 import java.util.List;
 
 import retrofit2.Call;
@@ -47,6 +48,9 @@ public interface ApiInterface {
                              @Field(HttpParams.COMMENT_AUTHOR_EMAIL) String email,
                              @Field(HttpParams.COMMENT_CONTENT) String content,
                              @Query(HttpParams.POST) int postID);
+
+
+    HashMap<String, String> myHash = new HashMap<>();
 
 
 }

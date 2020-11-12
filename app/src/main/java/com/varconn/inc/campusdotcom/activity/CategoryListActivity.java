@@ -39,6 +39,8 @@ public class CategoryListActivity extends BaseActivity {
     private RecyclerView mCategoryRecycler;
     private int mItemCount = 5;
 
+    ApiUtilities api = new ApiUtilities();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,7 +103,7 @@ public class CategoryListActivity extends BaseActivity {
     }
 
     private void loadCategories() {
-        ApiUtilities.getApiInterface().getCategories(mItemCount).enqueue(new Callback<List<Category>>() {
+        api.getApiInterface().getCategories(mItemCount).enqueue(new Callback<List<Category>>() {
             @Override
             public void onResponse(Call<List<Category>> call, Response<List<Category>> response) {
                 if (response.isSuccessful()) {

@@ -39,4 +39,8 @@
     <color name="title_color">#818181</color>
     <color name="toolbar_boarder">#e5e6ea</color>
 
+
+    <color name="grey_300">#E0E0E0</color>
+    <color name="color_white">#fefefe</color>
+
 </resources>

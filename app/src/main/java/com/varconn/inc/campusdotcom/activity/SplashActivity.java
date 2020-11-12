@@ -68,7 +68,7 @@ public class SplashActivity extends AppCompatActivity {
 
                         @Override
                         public void onAnimationEnd(Animation animation) {
-                            ActivityUtilities.getInstance().invokeNewActivity(mActivity, MainActivity.class, true);
+                            ActivityUtilities.getInstance().invokeNewActivity(mActivity, HomeActivity.class, true);
                         }
 
                         @Override
