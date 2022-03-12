@@ -73,20 +73,17 @@ public class HomeActivity extends BaseActivity {
 
     //data to add to recycter view
     public static String[] nameArray = {bmetroName, chronicleName , dailynewsName, hmetroName,
-            heraldName, iharareName,kwayedzaName, manicapostName, masvingomirrorName,
-            myzimbabweName,newsdayName,patriotName,southerneyeName,sundaymailName,
-            sundaynewsName,thestandardName,zbcnewsName,zimeyeName};
+            iharareName,kwayedzaName, manicapostName, masvingomirrorName,
+            myzimbabweName,patriotName,zimeyeName};
 
-    public static String[] versionArray = {bmetroURL, chronicleURL, dailynewsURL, hmetroURL, heraldURL,
-            iharareURL, kwayedzaURL, manicapostURL, masvingomirrorURL,myzimbabweURL,
-            newsdayURL,patriotURL, southerneyeURL, sundaymailURL, sundaynewsURL, thestandardURL,zbcnewsURL,
+    public static String[] versionArray = {bmetroURL, chronicleURL, dailynewsURL, hmetroURL,
+            iharareURL, kwayedzaURL, manicapostURL, masvingomirrorURL,myzimbabweURL,patriotURL,
             zimeyeURL};
 
     public static Integer[] drawableArray = {R.drawable.bmetro, R.drawable.chronicle,
-            R.drawable.dailynews, R.drawable.hmetro, R.drawable.herald, R.drawable.iharare,
+            R.drawable.dailynews, R.drawable.hmetro, R.drawable.iharare,
             R.drawable.kwayedza, R.drawable.manicapost, R.drawable.masvingomirror,R.drawable.news,
-            R.drawable.newsday,R.drawable.news,R.drawable.southerneye,R.drawable.sundaymail,R.drawable.sundaynews,
-            R.drawable.standard,R.drawable.zbcnews,R.drawable.zimeye};
+            R.drawable.news,R.drawable.zimeye};
 
     public static Integer[] id_ = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18};
 

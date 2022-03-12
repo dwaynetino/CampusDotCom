@@ -27,7 +27,7 @@ public class SplashActivity extends AppCompatActivity {
     private RelativeLayout mRootLayout;
 
     // Constants
-    private static final int SPLASH_DURATION = 2500;
+    private static final int SPLASH_DURATION = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

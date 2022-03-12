@@ -15,6 +15,7 @@
             android:title="@string/site_menu_category_list" />
 
         <item
+            android:visible="false"
             android:id="@+id/action_book"
             android:icon="@drawable/ic_book"
             android:title="@string/site_menu_book" />
@@ -25,7 +26,7 @@
             android:title="@string/settings" />
 
         <item
-            android:visible="false"
+            android:visible="true"
             android:id="@+id/action_about_dev"
             android:icon="@drawable/ic_developer"
             android:title="@string/about_dev" />
