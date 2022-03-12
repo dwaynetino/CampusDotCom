@@ -125,6 +125,10 @@ public class AppConstant {
     public static final String sundaynewsURL= "https://www.sundaynews.co.zw/";
     public static final String sundaynewsName= "Sunday News";
 
+    //TECHZIM
+    public static final String techzimURL= "https://www.techzim.co.zw/";
+    public static final String techzimName= "Tech Zim";
+
     //THE STANDARD
     public static final String thestandardURL= "https://www.thestandard.co.zw/";
     public static final String thestandardName= "The Standard";
