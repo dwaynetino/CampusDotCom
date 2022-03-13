@@ -338,8 +338,8 @@ public class MainActivity extends BaseActivity {
     private void loadData() {
         showLoader();
 
-        loadFeaturedPosts();
-        loadCategories();
+        //loadFeaturedPosts();
+        //loadCategories();
         loadRecentPosts();
 
         if (mSwipeRefreshLayout.isRefreshing()) {
